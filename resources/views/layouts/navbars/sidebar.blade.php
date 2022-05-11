@@ -50,18 +50,26 @@
                 <span class="sidebar-normal"> {{ __('Expired Transactions') }} </span>
               </a>
             </li>
+            @if(Session::get('user')->role == 'admin')
             <li class="nav-item{{ $activePage == 'investment' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('make_investment') }}">
                 <span class="sidebar-mini">&nbsp</span>
                 <span class="sidebar-normal"> {{ __('Make an Investment') }} </span>
               </a>
             </li>
+            @else
+            @endif
+            
+            @if(Session::get('user')->role == 'admin')
             <li class="nav-item{{ $activePage == 'invest_others' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('invest_others') }}">
                 <span class="sidebar-mini">&nbsp</span>
                 <span class="sidebar-normal"> {{ __('Invest For Others') }} </span>
               </a>
             </li>
+            @else
+            @endif
+            
             <li class="nav-item{{ $activePage == 'transfer' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('wallet_transfer') }}">
                 <span class="sidebar-mini">&nbsp</span>
@@ -81,12 +89,6 @@
         </a>
         <div class="collapse" id="account">
           <ul class="nav">
-            <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
-              <a class="nav-link" href="{{ route('profile.edit') }}">
-                <span class="sidebar-mini">&nbsp</span>
-                <span class="sidebar-normal">{{ __('Profile') }} </span>
-              </a>
-            </li>
             @if(Session::get('user')->role == 'admin')
             <li class="nav-item{{ $activePage == 'memberprofile' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('profile.member') }}">
@@ -95,6 +97,12 @@
               </a>
             </li>
             @else
+            <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('profile.edit') }}">
+                <span class="sidebar-mini">&nbsp</span>
+                <span class="sidebar-normal">{{ __('Profile') }} </span>
+              </a>
+            </li>
             @endif
           </ul>
         </div>
