@@ -1,0 +1,27 @@
+@font-face {
+    font-family: flaticon;
+    src: url(../fonts/flacticon/Flaticon.eot);
+    src: url(../fonts/flacticon/Flaticond41d.eot?#iefix) format("embedded-opentype"),url(../fonts/flacticon/Flaticon.woff) format("woff"),url(../fonts/flacticon/Flaticon.ttf) format("truetype"),url(../fonts/flacticon/Flaticon.svg#Flaticon) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+        font-family:flaticon;
+        src: url(../fonts/flacticon/Flaticon.svg#Flaticon) format("svg")
+    }
+}
+
+[class^=flaticon-]:before,[class*=" flaticon-"]:before,[class^=flaticon-]:after,[class*=" flaticon-"]:after {
+    font-family: Flaticon;
+    font-style: normal
+}
+
+.flaticon-apps:before {
+    content: "\f100"
+}
+
+.flaticon-menu:before {
+    content: "\f101"
+}

@@ -1,0 +1,363 @@
+@media only screen and (max-width: 1600px) {
+}
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 992px) {
+    .tokens-area .tokens {
+        margin:0
+    }
+
+    .tokens-area .tokens .token-body {
+        padding: 50px 25px
+    }
+
+    footer .footer-bottom {
+        height: auto;
+        line-height: 26px;
+        padding: 50px 0;
+        text-align: center
+    }
+
+    footer .footer-bottom .foo-link {
+        text-align: center;
+        margin-top: 15px
+    }
+
+    .logo-area {
+        text-align: center
+    }
+
+    header .menu-area {
+        float: none;
+        width: 100%;
+        text-align: center
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .mobile-menu-area {
+        display:block!important
+    }
+
+    .my-video-dimensions {
+        width: 480px;
+        height: 249px
+    }
+
+    .video-area .videos-heding .videos-box .video-js .vjs-big-play-button {
+        top: 24%
+    }
+
+    .tokens-area .tokens {
+        display: block;
+        margin: 0 0 50px
+    }
+
+    .tokens-area .tokens .token-body {
+        display: block
+    }
+
+    .easypiechart {
+        display: block
+    }
+
+    .tokens-area .token-con {
+        margin: 0
+    }
+
+    .e_chart_3 div {
+        margin: 0 auto
+    }
+
+    .token-details .cart-list .label-chatrs {
+        padding: 62px 100px
+    }
+
+    .token-details .owl-controls .owl-buttons div.owl-prev {
+        left: 0;
+        border-radius: 0 15px 15px 0
+    }
+
+    .token-details .owl-controls .owl-buttons div.owl-next {
+        right: 0;
+        border-radius: 15px 0 0 15px
+    }
+
+    .blog-area .owl-controls .owl-buttons {
+        display: none
+    }
+
+    header .mobilemenu .mean-container .mean-nav {
+        margin-top: 38px
+    }
+
+    .easypiechart {
+        display: block;
+        text-align: center;
+        margin: auto;
+        margin-top: 55px
+    }
+
+    .btc_timer_section_wrapper {
+        text-align: center
+    }
+
+    .video-des .deslidt ul li .serials:before,.video-des .deslidt ul li .serials span.cre:before,.video-des .deslidt ul li .serials span.cre:after {
+        display: none
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    footer .footer-top .con ul li a {
+        width:54px;
+        height: 54px;
+        line-height: 50px;
+        font-size: 24px
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .features-area .featured-lists ul li .imgs-l img,.features-area .featured-lists ul li .imgs-r img {
+        width:100%
+    }
+
+    footer .footer-bottom .foo-link ul li {
+        padding: 0
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .my-video-dimensions {
+        width:400px;
+        height: 207px
+    }
+
+    .video-area .videos-heding .videos-box .video-js .vjs-big-play-button {
+        top: 24%
+    }
+
+    .video-area .videos-heding h2 {
+        font-size: 36px
+    }
+
+    footer .footer-top .con ul li a {
+        width: 54px;
+        height: 54px;
+        line-height: 50px;
+        font-size: 24px
+    }
+
+    footer .footer-top .con ul li {
+        padding: 0 5px
+    }
+
+    .media-area .mediabrand ul {
+        margin: 0
+    }
+
+    .e_chart_3 {
+        height: 300px!important
+    }
+
+    .token-details .owl-controls .owl-buttons div {
+        display: none
+    }
+
+    .media-area .mediabrand ul li {
+        display: block;
+        text-align: center;
+        padding: 15px 0
+    }
+
+    .team-area .team-list {
+        margin-bottom: 50px!important;
+        height: 550px!important
+    }
+
+    .team-area2 .team-list {
+        overflow: hidden
+    }
+
+    .team2-area .team-list {
+        margin-bottom: 50px!important;
+        height: 550px!important
+    }
+
+    .token-details .cart-list .label-chatrs {
+        padding: 62px
+    }
+
+    .steps-area .steps-heading h2 {
+        font-size: 26px
+    }
+
+    .search_main button {
+        width: 100%
+    }
+
+    .team2-area .team-list .dbox,.team-area .team-list .dbox {
+        text-align: center
+    }
+
+    .tokens-area .tokens .token-body .prices h3 {
+        margin: 30px 0
+    }
+
+    .video-area .videos-heding .videos-box {
+        display: block
+    }
+
+    .media-area .mediabrand ul {
+        margin: 0;
+        text-align: center
+    }
+
+    .media-area .mediabrand ul li {
+        display: -webkit-inline-box;
+        text-align: center;
+        padding: 15px 12px
+    }
+
+    .currency-area .rete-list h2 span {
+        font-size: 18px
+    }
+
+    .currency-area .rete-list .content .con {
+        text-align: center;
+        padding-top: 30px;
+        display: block
+    }
+
+    footer .footer-bottom .foo-link ul li {
+        padding: 0
+    }
+
+    footer .footer-bottom {
+        line-height: 20px
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .my-video-dimensions {
+        width:300px;
+        height: 155px
+    }
+
+    .video-area .videos-heding .videos-box .video-js .vjs-big-play-button {
+        top: 24%
+    }
+
+    .video-area .videos-heding .videos-box .video-js .vjs-big-play-button {
+        width: 70px;
+        height: 70px
+    }
+
+    .video-area .videos-heding .videos-box .video-js .vjfooter .footer-bottom .foo-link ul li {
+        display: block;
+        padding: 5px;
+        position: relative
+    }
+
+    s-big-play-button::before {
+        height: 70px;
+        line-height: 70px;
+        width: 30px;
+        background-size: contain
+    }
+
+    .video-area .videos-heding h2 {
+        font-size: 30px
+    }
+
+    .tokens-area .tokens .token-body .left-btn {
+        padding: 0 20px;
+        font-size: 16px
+    }
+
+    .tokens-area .tokens .token-body .right-btn {
+        padding: 0 20px;
+        font-size: 16px
+    }
+
+    .token-details .cart-list .label-chatrs {
+        padding: 30px 25px
+    }
+
+    .team-area .team-list {
+        height: auto;
+        padding-bottom: 30px
+    }
+
+    .team2-area .team-list {
+        height: auto;
+        padding-bottom: 30px
+    }
+
+    footer .footer-bottom {
+        height: auto;
+        line-height: 28px;
+        padding: 5px 0;
+        text-align: center
+    }
+
+    footer .footer-bottom .foo-link {
+        text-align: initial
+    }
+
+    footer .footer-bottom .foo-link ul li {
+        padding: 5px
+    }
+}
+
+@media(max-width: 1199px) {
+    header .menu-area nav ul li a {
+        font-size:12px
+    }
+
+    .btn1 {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 25px
+    }
+
+    header .menu-area {
+        padding-top: 5px
+    }
+
+    header .menu-area nav ul li {
+        padding: 0 9px
+    }
+
+    #clockdiv div>span,#clockdiv2 div>span {
+        width: 100px;
+        height: 189px;
+        line-height: 182px
+    }
+
+    .btc_timer_section_wrapper {
+        padding-top: 110px
+    }
+
+    .slider-area .slider-content h2 {
+        font-size: 40px
+    }
+}
+
+@media(max-width: 767px) {
+    .logo-area {
+        text-align:left
+    }
+
+    .logo-area {
+        width: 234px!important
+    }
+}
+
+@media(max-width: 1199px) and (min-width:991px) {
+    .rete-list {
+        width:23%!important;
+        margin-left: 15px!important
+    }
+}
