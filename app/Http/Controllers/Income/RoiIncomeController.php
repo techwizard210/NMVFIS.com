@@ -22,16 +22,16 @@ class RoiIncomeController extends Controller
         $this->userModel = new User();
     }
 
-    public function index()
-    {
-        $user = Session::get('user');   // Session User Data
-        $userId = $user->userId;
-        $userData = User::where('userId', $userId)->first();
+    // public function index()
+    // {
+    //     $user = Session::get('user');   // Session User Data
+    //     $userId = $user->userId;
+    //     $userData = User::where('userId', $userId)->first();
 
-        $roiModel = new Member_roi_list();
-        $userRoiDatas = $roiModel->getUserRoiData($userId);
-        return view('pages.income.roi')->with(['userData' => $userData, 'userRoiDatas' => $userRoiDatas]);
-    }
+    //     $roiModel = new Member_roi_list();
+    //     $userRoiDatas = $roiModel->getUserRoiData($userId);
+    //     return view('pages.income.roi')->with(['userData' => $userData, 'userRoiDatas' => $userRoiDatas]);
+    // }
 
     public function roiIncome(Request $request)
     {
