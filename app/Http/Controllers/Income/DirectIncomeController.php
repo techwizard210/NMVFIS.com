@@ -10,12 +10,12 @@ use App\Models\Member_referral_list;
 
 class DirectIncomeController extends Controller
 {
-    public function index()
-    {
-        $user = Session::get('user');   // Session User Data
-        $userId = $user->userId;
+    // public function index()
+    // {
+    //     $user = Session::get('user');   // Session User Data
+    //     $userId = $user->userId;
 
-        $datas = Member_referral_list::where('otherUserId', $userId)->get()->toarray();
-        return view('pages.income.direct')->with(['datas' => $datas]);
-    }
+    //     $datas = Member_referral_list::where('otherUserId', $userId)->get()->toarray();
+    //     return view('pages.income.direct')->with(['datas' => $datas]);
+    // }
 }
