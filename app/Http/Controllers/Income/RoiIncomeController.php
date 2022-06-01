@@ -51,76 +51,76 @@ class RoiIncomeController extends Controller
                 ->select('t1.*')
                 ->first();
 
-            foreach ($user_rows as $key => $user) {
-                $userId = $user->userId;
-                $user_invest_data = $investmentModel->getUserInvestData($userId);
-                if ($user_invest_data) {
-                    $depositId = $user_invest_data->depositId;
-                    $package_amount = $user_invest_data->amount;
-                    $roi_amount = $user_invest_data->amount * 1 * ($percent * 1 / 100);
+            // foreach ($user_rows as $key => $user) {
+            //     $userId = $user->userId;
+            //     $user_invest_data = $investmentModel->getUserInvestData($userId);
+            //     if ($user_invest_data) {
+            //         $depositId = $user_invest_data->depositId;
+            //         $package_amount = $user_invest_data->amount;
+            //         $roi_amount = $user_invest_data->amount * 1 * ($percent * 1 / 100);
 
-                    $newInvestAmount = $user_invest_data->income_amount * 1 + $roi_amount * 1;
-                    $newInvestPercent = $user_invest_data->income_percent * 1 + $percent * 1;
-                    $userTargetInvest = $user_invest_data->amount * 1 * 4.5;
+            //         $newInvestAmount = $user_invest_data->income_amount * 1 + $roi_amount * 1;
+            //         $newInvestPercent = $user_invest_data->income_percent * 1 + $percent * 1;
+            //         $userTargetInvest = $user_invest_data->amount * 1 * 4.5;
 
-                    $beforeUserWalletBalance = Member_wallet_balance::where('userId', $userId)->first();
+            //         $beforeUserWalletBalance = Member_wallet_balance::where('userId', $userId)->first();
 
-                    if ($newInvestAmount * 1 < $userTargetInvest * 1) {
-                        Member_investment_list::where('userId', $userId)
-                            ->where('id', $user_invest_data->id)
-                            ->update([
-                                'income_amount' =>  $newInvestAmount,
-                                'income_percent' =>  $newInvestPercent,
-                            ]);
+            //         if ($newInvestAmount * 1 < $userTargetInvest * 1) {
+            //             Member_investment_list::where('userId', $userId)
+            //                 ->where('id', $user_invest_data->id)
+            //                 ->update([
+            //                     'income_amount' =>  $newInvestAmount,
+            //                     'income_percent' =>  $newInvestPercent,
+            //                 ]);
 
-                        $added_income = $beforeUserWalletBalance->income_amount * 1 + $roi_amount * 1;
-                        Member_wallet_balance::where('userId', $userId)
-                            ->update([
-                                'income_amount' =>  $added_income,
-                            ]);
+            //             $added_income = $beforeUserWalletBalance->income_amount * 1 + $roi_amount * 1;
+            //             Member_wallet_balance::where('userId', $userId)
+            //                 ->update([
+            //                     'income_amount' =>  $added_income,
+            //                 ]);
 
-                        $new_member_roi = new Member_roi_list;
-                        $new_member_roi->userId =  $userId;
-                        $new_member_roi->depositId =  $depositId;
-                        $new_member_roi->package_amount =  $package_amount;
-                        $new_member_roi->roi_amount =  $roi_amount;
-                        $new_member_roi->percent =  $percent;
-                        $new_member_roi->save();
-                    } else {
-                        $add_roi_amount = $userTargetInvest * 1 - $user_invest_data->income_amount * 1;
-                        $new_wallet_income = $beforeUserWalletBalance->income_amount * 1 + $add_roi_amount * 1;
+            //             $new_member_roi = new Member_roi_list;
+            //             $new_member_roi->userId =  $userId;
+            //             $new_member_roi->depositId =  $depositId;
+            //             $new_member_roi->package_amount =  $package_amount;
+            //             $new_member_roi->roi_amount =  $roi_amount;
+            //             $new_member_roi->percent =  $percent;
+            //             $new_member_roi->save();
+            //         } else {
+            //             $add_roi_amount = $userTargetInvest * 1 - $user_invest_data->income_amount * 1;
+            //             $new_wallet_income = $beforeUserWalletBalance->income_amount * 1 + $add_roi_amount * 1;
 
-                        Member_investment_list::where('userId', $userId)
-                            ->where('id', $user_invest_data->id)
-                            ->update([
-                                'income_amount' =>  $userTargetInvest,
-                                'income_percent' =>  450,
-                                'invest_status' =>  1,
-                            ]);
+            //             Member_investment_list::where('userId', $userId)
+            //                 ->where('id', $user_invest_data->id)
+            //                 ->update([
+            //                     'income_amount' =>  $userTargetInvest,
+            //                     'income_percent' =>  450,
+            //                     'invest_status' =>  1,
+            //                 ]);
 
-                        Member_wallet_balance::where('userId', $userId)
-                            ->update([
-                                'income_amount' =>  $new_wallet_income,
-                            ]);
+            //             Member_wallet_balance::where('userId', $userId)
+            //                 ->update([
+            //                     'income_amount' =>  $new_wallet_income,
+            //                 ]);
 
-                        $adminUserId = $admin_wallet_balance->userId;
-                        $extraAmount = $newInvestAmount * 1 - $userTargetInvest * 1;
-                        $new_admin_income_amount = $admin_wallet_balance->income_amount * 1 + $extraAmount * 1;
-                        Member_wallet_balance::where('userId', $adminUserId)
-                            ->update([
-                                'income_amount' =>  $new_admin_income_amount,
-                            ]);
+            //             $adminUserId = $admin_wallet_balance->userId;
+            //             $extraAmount = $newInvestAmount * 1 - $userTargetInvest * 1;
+            //             $new_admin_income_amount = $admin_wallet_balance->income_amount * 1 + $extraAmount * 1;
+            //             Member_wallet_balance::where('userId', $adminUserId)
+            //                 ->update([
+            //                     'income_amount' =>  $new_admin_income_amount,
+            //                 ]);
 
-                        $new_member_roi = new Member_roi_list;
-                        $new_member_roi->userId =  $userId;
-                        $new_member_roi->depositId =  $depositId;
-                        $new_member_roi->package_amount =  $package_amount;
-                        $new_member_roi->roi_amount =  $add_roi_amount;
-                        $new_member_roi->percent =  $percent;
-                        $new_member_roi->save();
-                    }
-                }
-            }
+            //             $new_member_roi = new Member_roi_list;
+            //             $new_member_roi->userId =  $userId;
+            //             $new_member_roi->depositId =  $depositId;
+            //             $new_member_roi->package_amount =  $package_amount;
+            //             $new_member_roi->roi_amount =  $add_roi_amount;
+            //             $new_member_roi->percent =  $percent;
+            //             $new_member_roi->save();
+            //         }
+            //     }
+            // }
             return response()->json(['status' => 200]);
         } catch (\Exception $e) {
             $error = 'Error: ' . $e->getMessage();
