@@ -24,26 +24,26 @@ class BinaryBonusController extends Controller
     }
 
 
-    // public function setNewPercentage(Request $request)
-    // {
-    //     $percent = $request->percent;
+    public function setNewPercentage(Request $request)
+    {
+        $percent = $request->percent;
 
-    //     try {
-    //         $check = Binary_Bonus_Percentage::where('created_at', date('Y-m-d'))->first();
-    //         if ($check) {
-    //             Binary_Bonus_Percentage::where('created_at', date('Y-m-d'))
-    //                 ->update([
-    //                     'percent' =>  $percent,
-    //                 ]);
-    //         } else {
-    //             $binaryBonusModel = new Binary_Bonus_Percentage();
-    //             $binaryBonusModel->percent =  $percent;
-    //             $binaryBonusModel->save();
-    //         }
-    //         return response()->json(['status' => 200]);
-    //     } catch (\Exception $e) {
-    //         $error = 'Error: ' . $e->getMessage();
-    //         return response()->json(['status' => 400, 'error' => $error]);
-    //     }
-    // }
+        try {
+            $check = Binary_Bonus_Percentage::where('created_at', date('Y-m-d'))->first();
+            if ($check) {
+                Binary_Bonus_Percentage::where('created_at', date('Y-m-d'))
+                    ->update([
+                        'percent' =>  $percent,
+                    ]);
+            } else {
+                $binaryBonusModel = new Binary_Bonus_Percentage();
+                $binaryBonusModel->percent =  $percent;
+                $binaryBonusModel->save();
+            }
+            return response()->json(['status' => 200]);
+        } catch (\Exception $e) {
+            $error = 'Error: ' . $e->getMessage();
+            return response()->json(['status' => 400, 'error' => $error]);
+        }
+    }
 }
