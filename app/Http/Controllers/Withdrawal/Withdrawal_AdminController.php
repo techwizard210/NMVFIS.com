@@ -40,10 +40,10 @@ class Withdrawal_AdminController extends Controller
             $latest_txnInfo = Member_wallet_balance::where('userId', $userId)->first();
             $minus_income = $latest_txnInfo->income_amount * 1 - $amount * 1;
 
-            Member_wallet_balance::where('userId', $userId)
-                ->update([
-                    'income_amount' =>  $minus_income,
-                ]);
+            // Member_wallet_balance::where('userId', $userId)
+            //     ->update([
+            //         'income_amount' =>  $minus_income,
+            //     ]);
 
             return response()->json(['status' => 200]);
         } catch (\Exception $e) {
