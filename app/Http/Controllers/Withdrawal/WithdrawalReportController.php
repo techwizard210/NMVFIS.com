@@ -16,31 +16,31 @@ use App\Models\Withdrawal_fee;
 
 class WithdrawalReportController extends Controller
 {
-    public function index()
-    {
-        $user = Session::get('user');   // Session User Data
-        $userId = $user->userId;
-        $user_data = User::where('userId', $userId)->first();
-        $user_role = $user_data->role;
+    // public function index()
+    // {
+    //     $user = Session::get('user');   // Session User Data
+    //     $userId = $user->userId;
+    //     $user_data = User::where('userId', $userId)->first();
+    //     $user_role = $user_data->role;
 
-        $withdrawalModel = new Member_withdrawal_balance();
+    //     $withdrawalModel = new Member_withdrawal_balance();
 
-        if ($user_role == 'admin') {
-            $today = date("Y-m-d");
-            $getWithdrawalReports = $withdrawalModel->getWithdrawalReports_Admin($today)->toArray();
-            $datas = json_decode(json_encode($getWithdrawalReports), true);
-            return view('pages.withdrawal.report_admin')->with([
-                'withdrawal_datas' => $datas,
-                'today' =>  date("d/m/Y"),
-            ]);
-        } else if ($user_role == 'user') {
-            $getWithdrawalReports = $withdrawalModel->getWithdrawalReports($userId)->toArray();
-            $datas = json_decode(json_encode($getWithdrawalReports), true);
-            return view('pages.withdrawal.report')->with([
-                'withdrawal_datas' => $datas,
-            ]);
-        }
-    }
+    //     if ($user_role == 'admin') {
+    //         $today = date("Y-m-d");
+    //         $getWithdrawalReports = $withdrawalModel->getWithdrawalReports_Admin($today)->toArray();
+    //         $datas = json_decode(json_encode($getWithdrawalReports), true);
+    //         return view('pages.withdrawal.report_admin')->with([
+    //             'withdrawal_datas' => $datas,
+    //             'today' =>  date("d/m/Y"),
+    //         ]);
+    //     } else if ($user_role == 'user') {
+    //         $getWithdrawalReports = $withdrawalModel->getWithdrawalReports($userId)->toArray();
+    //         $datas = json_decode(json_encode($getWithdrawalReports), true);
+    //         return view('pages.withdrawal.report')->with([
+    //             'withdrawal_datas' => $datas,
+    //         ]);
+    //     }
+    // }
 
     public function table($date)
     {
