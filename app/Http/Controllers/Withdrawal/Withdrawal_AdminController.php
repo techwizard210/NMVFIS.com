@@ -23,32 +23,32 @@ class Withdrawal_AdminController extends Controller
         return view('pages.income.elite')->with(['data' => $data]);
     }
 
-    // public function withdrawal(Request $request)
-    // {
-    //     $user = Session::get('user');   // Session User Data
-    //     $userId = $user->userId;
-    //     $amount = $request->amount;
+    public function withdrawal(Request $request)
+    {
+        $user = Session::get('user');   // Session User Data
+        $userId = $user->userId;
+        $amount = $request->amount;
 
-    //     try {
-    //         $withdrawal_balance = new Member_withdrawal_balance;
-    //         $withdrawal_balance->userId =  $userId;
-    //         $withdrawal_balance->withdrawal_amount =  $amount;
-    //         $withdrawal_balance->status =  0;
-    //         $withdrawal_balance->save();
+        try {
+            $withdrawal_balance = new Member_withdrawal_balance;
+            $withdrawal_balance->userId =  $userId;
+            $withdrawal_balance->withdrawal_amount =  $amount;
+            $withdrawal_balance->status =  0;
+            $withdrawal_balance->save();
 
-    //         //Minus withdrawal amount from member's income_amount in member_latest_txninfos
-    //         $latest_txnInfo = Member_wallet_balance::where('userId', $userId)->first();
-    //         $minus_income = $latest_txnInfo->income_amount * 1 - $amount * 1;
+            //Minus withdrawal amount from member's income_amount in member_latest_txninfos
+            $latest_txnInfo = Member_wallet_balance::where('userId', $userId)->first();
+            $minus_income = $latest_txnInfo->income_amount * 1 - $amount * 1;
 
-    //         Member_wallet_balance::where('userId', $userId)
-    //             ->update([
-    //                 'income_amount' =>  $minus_income,
-    //             ]);
+            Member_wallet_balance::where('userId', $userId)
+                ->update([
+                    'income_amount' =>  $minus_income,
+                ]);
 
-    //         return response()->json(['status' => 200]);
-    //     } catch (\Exception $e) {
-    //         $error = 'Error: ' . $e->getMessage();
-    //         return response()->json(['status' => 400, 'error' => $error]);
-    //     }
-    // }
+            return response()->json(['status' => 200]);
+        } catch (\Exception $e) {
+            $error = 'Error: ' . $e->getMessage();
+            return response()->json(['status' => 400, 'error' => $error]);
+        }
+    }
 }
