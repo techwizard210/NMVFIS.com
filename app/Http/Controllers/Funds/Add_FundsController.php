@@ -28,22 +28,22 @@ class Add_FundsController extends Controller
 
         $coins = array();
 
-        // try {
-        //     $ratesWithAccepted = $cps_api->GetRatesWithAccepted();
-        //     dump($ratesWithAccepted); exit;
-        //     foreach ($ratesWithAccepted['result'] as $key => $rate) {
-        //         if ($rate['accepted'] == 1) {
-        //             $temp = array(
-        //                 "key" => $key,
-        //                 "rate" =>  $rate,
-        //             );
-        //             array_push($coins, $temp);
-        //         }
-        //     }
-        // } catch (\Exception $e) {
-        //     echo 'Error: ' . $e->getMessage();
-        //     exit();
-        // }
+        try {
+            $ratesWithAccepted = $cps_api->GetRatesWithAccepted();
+            dump($ratesWithAccepted); exit;
+            foreach ($ratesWithAccepted['result'] as $key => $rate) {
+                if ($rate['accepted'] == 1) {
+                    $temp = array(
+                        "key" => $key,
+                        "rate" =>  $rate,
+                    );
+                    array_push($coins, $temp);
+                }
+            }
+        } catch (\Exception $e) {
+            echo 'Error: ' . $e->getMessage();
+            exit();
+        }
 
         return view('pages.funds.add_funds')->with(['userData' => $userData, 'coins' => $coins]);
     }
