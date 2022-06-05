@@ -17,7 +17,7 @@
             <h4><strong>Welcome Back!</strong></h4>
             <p class="card-description text-center">Sign in to continue to NMVFIS.</p>
           </div>
-          <div class="bmd-form-group{{ $errors->has('userId') ? ' has-danger' : '' }}">
+          <!-- <div class="bmd-form-group{{ $errors->has('userId') ? ' has-danger' : '' }}">
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text" style="padding: 0px 15px 0px 0px">
@@ -31,7 +31,7 @@
               <strong>{{ $errors->first('userId') }}</strong>
             </div>
             @endif
-          </div>
+          </div> -->
           <div class="bmd-form-group{{ $errors->has('password') ? ' has-danger' : '' }} " style="margin-top: 30px">
             <div class="input-group">
               <div class="input-group-prepend">
