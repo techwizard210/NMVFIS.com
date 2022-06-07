@@ -15,7 +15,7 @@
           <div style="text-align: center;">
             <h4><strong>Register Account</strong></h4>
           </div>
-         <!--  <div class="row">
+          <div class="row">
             <div class="bmd-form-group{{ $errors->has('userId') ? ' has-danger' : '' }} m-b-15 col-md-6 i-p-10">
               <div class="">
                 <label class="wallet-label">User Id</label>
@@ -38,7 +38,7 @@
               </div>
               @endif
             </div>
-          </div> -->
+          </div>
           <div class="row">
             <div class="bmd-form-group{{ $errors->has('phone') ? ' has-danger' : '' }} m-b-15 col-md-6 i-p-10">
               <div class="">
