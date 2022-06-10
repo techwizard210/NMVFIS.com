@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -21,4 +21,4 @@
     <p>Thank you</p>
 </body>
 
-</html> -->
+</html>
