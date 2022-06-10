@@ -1,6 +1,6 @@
 <footer class="footer">
   <div class="container-fluid">
-    <!-- <nav class="float-left">
+    <nav class="float-left">
       <ul>
         <li>
           <a href="https://www.creative-tim.com">
@@ -23,7 +23,7 @@
           </a>
         </li>
       </ul>
-    </nav> -->
+    </nav>
     <div class="copyright float-right">
       Copyrights 
       &copy;
