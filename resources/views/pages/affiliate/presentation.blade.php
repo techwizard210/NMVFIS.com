@@ -1,4 +1,4 @@
-<!-- @extends('layouts.app', ['activePage' => 'presentation', 'titlePage' => __('Company Presentation')])
+@extends('layouts.app', ['activePage' => 'presentation', 'titlePage' => __('Company Presentation')])
 
 @section('content')
 <div class="content">
@@ -17,4 +17,4 @@
     </div>
   </div>
 </div>
-@endsection -->
+@endsection
