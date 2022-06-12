@@ -20,7 +20,7 @@
                 <div class="row">
                   <div class="col-sm-12">
                     <table id="datatables" class="table table-striped table-no-bordered table-hover dataTable dtr-inline" cellspacing="0" width="100%" style="width: 100%;" role="grid" aria-describedby="datatables_info">
-                  <!--     <thead>
+                      <thead>
                         <tr role="row">
                           <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1" colspan="1" style="width: 70px;" aria-label="No: activate to sort column ascending">Sr. No</th>
                           <th class="sorting_desc" tabindex="0" aria-controls="datatables" rowspan="1" colspan="1" aria-label="AmoDatent: activate to sort column ascending">Date</th>
@@ -29,7 +29,7 @@
                           <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending">Address</th>
                           <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending">Action</th>
                         </tr>
-                      </thead> -->
+                      </thead>
                       <tfoot>
                         <tr>
                           <th rowspan="1" colspan="1">Sr. No</th>
