@@ -9,12 +9,12 @@
       </div>
       <div class="card-body">
         <div>
-          <!-- <div class="pay-div amount_input">
+          <div class="pay-div amount_input">
             <div class="mb-3 col-md-4 m-auto">
               <label class="input-group-text">Enter Amount In (USD)</label>
               <input id="amount" class="form-group-control input-radius" type="number" name="amount" min="1" step="1" onkeypress="" title="Numbers only" placeholder="" aria-required="true" aria-invalid="false">
             </div>
-          </div> -->
+          </div>
           <div class="form-group mb-3 m-auto pay-div col-md-4">
             <label class="input-group-text">Payment Mode</label>
             <select id="paymentMode" class="form-select">
