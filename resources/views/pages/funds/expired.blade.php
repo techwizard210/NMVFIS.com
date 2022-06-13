@@ -1,4 +1,4 @@
-<!-- @extends('layouts.app', ['activePage' => 'expired', 'titlePage' => __('Expired Transactions')])
+ @extends('layouts.app', ['activePage' => 'expired', 'titlePage' => __('Expired Transactions')])
 
 @section('content')
 <div class="content">
@@ -85,7 +85,7 @@
               </div>
             </div>
           </div>
-          <!-- end content-->
+          <!-- end content
         </div>
         <!--  end card  -->
       </div>
@@ -93,4 +93,4 @@
     </div>
   </div>
 </div>
-@endsection -->
+@endsection
