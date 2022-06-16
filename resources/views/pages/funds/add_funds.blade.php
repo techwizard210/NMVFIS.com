@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'funds', 'titlePage' => __('Add Funds')])
+<!-- @extends('layouts.app', ['activePage' => 'funds', 'titlePage' => __('Add Funds')])
 
 @section('content')
 <div class="content">
@@ -152,4 +152,4 @@
   }
 </script>
 
-@endsection
+@endsection -->
