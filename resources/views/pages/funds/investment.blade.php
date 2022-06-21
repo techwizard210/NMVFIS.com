@@ -42,7 +42,7 @@
     </div>
 </div>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     // $(document).ready(function() {
     //     document.getElementById("button").classList.remove("btn-info");
     // });
@@ -141,5 +141,5 @@
             });
         }
     }
-</script>
+</script> -->
 @endsection
