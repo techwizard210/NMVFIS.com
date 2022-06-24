@@ -59,35 +59,35 @@
     }
 
 
-    function handleStatusCheck() {
-        $userId = `{{$userId}}`;
-        $otheruserid = $("#otheruserid").val();
-        $userIdList = <?php echo json_encode($userIdList); ?>;
-        $userNameList = <?php echo json_encode($userNameList); ?>;
-        $invest_status_lists = <?php echo json_encode($invest_status_lists); ?>;
-        $temp = $userIdList.indexOf($otheruserid);
-        $amount = $("#amount").val();
-        $package = $("#package").val();
-        if ($package) {
-            $from_amount = $package.split("to")[0] * 1;
-            $to_amount = $package.split("to")[1] * 1;
-            if ($userId != $otheruserid && $otheruserid && $temp >= 0 && $package && $amount >= $from_amount && $amount <= $to_amount) {
-                document.getElementById('alert').innerHTML = '';
-                if ($invest_status_lists[$temp] == false) {
-                    $alert_txt = "This member is already have an investment running!";
-                    document.getElementById('invest_alert').innerHTML = $alert_txt;
-                } else {
-                    document.getElementById("button").disabled = false;
-                    document.getElementById('user_alert').innerHTML = '';
-                    document.getElementById('invest_alert').innerHTML = '';
-                    document.getElementById("button").classList.add("btn-info");
-                }
-            } else {
-                document.getElementById("button").disabled = true;
-                document.getElementById("button").classList.remove("btn-info");
-            }
-        }
-    }
+    // function handleStatusCheck() {
+    //     $userId = `{{$userId}}`;
+    //     $otheruserid = $("#otheruserid").val();
+    //     $userIdList = <?php echo json_encode($userIdList); ?>;
+    //     $userNameList = <?php echo json_encode($userNameList); ?>;
+    //     $invest_status_lists = <?php echo json_encode($invest_status_lists); ?>;
+    //     $temp = $userIdList.indexOf($otheruserid);
+    //     $amount = $("#amount").val();
+    //     $package = $("#package").val();
+    //     if ($package) {
+    //         $from_amount = $package.split("to")[0] * 1;
+    //         $to_amount = $package.split("to")[1] * 1;
+    //         if ($userId != $otheruserid && $otheruserid && $temp >= 0 && $package && $amount >= $from_amount && $amount <= $to_amount) {
+    //             document.getElementById('alert').innerHTML = '';
+    //             if ($invest_status_lists[$temp] == false) {
+    //                 $alert_txt = "This member is already have an investment running!";
+    //                 document.getElementById('invest_alert').innerHTML = $alert_txt;
+    //             } else {
+    //                 document.getElementById("button").disabled = false;
+    //                 document.getElementById('user_alert').innerHTML = '';
+    //                 document.getElementById('invest_alert').innerHTML = '';
+    //                 document.getElementById("button").classList.add("btn-info");
+    //             }
+    //         } else {
+    //             document.getElementById("button").disabled = true;
+    //             document.getElementById("button").classList.remove("btn-info");
+    //         }
+    //     }
+    // }
 
     function handleotheruserid() {
         $userId = `{{$userId}}`;
