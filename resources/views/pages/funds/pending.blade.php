@@ -1,4 +1,4 @@
-<!-- @extends('layouts.app', ['activePage' => 'pending', 'titlePage' => __('Pending Transactions')])
+ @extends('layouts.app', ['activePage' => 'pending', 'titlePage' => __('Pending Transactions')])
 
 @section('content')
 <div class="content">
@@ -88,7 +88,7 @@
               </div>
             </div>
           </div>
-          <!-- end content-->
+          <!-- end content
         </div>
         <!--  end card  -->
       </div>
