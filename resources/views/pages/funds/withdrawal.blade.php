@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'withdrawal', 'titlePage' => __('Withdrawal Wallet to Cash Wallet transfer')])
+<!-- @extends('layouts.app', ['activePage' => 'withdrawal', 'titlePage' => __('Withdrawal Wallet to Cash Wallet transfer')])
 
 @section('content')
 <div class="content">
@@ -96,4 +96,4 @@
         });
     }
 </script>
-@endsection
+@endsection -->
