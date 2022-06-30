@@ -31,7 +31,7 @@
                           <th class="sorting" tabindex="0" aria-controls="datatables" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending">Action</th>
                         </tr>
                       </thead>
-                      <!-- <tfoot>
+                      <tfoot>
                         <tr>
                           <th rowspan="1" colspan="1">Sr. No</th>
                           <th rowspan="1" colspan="1">Date</th>
@@ -41,7 +41,7 @@
                           <th rowspan="1" colspan="1">Address</th>
                           <th rowspan="1" colspan="1">Action</th>
                         </tr>
-                      </tfoot> -->
+                      </tfoot>
                       <tbody>
                         @if($data)
                         @foreach($data as $key => $temp)
