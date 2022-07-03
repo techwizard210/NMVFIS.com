@@ -8,7 +8,7 @@
                 <h4 class="card-title">Transfer Investment Wallet To Other Member Investment Wallet</h4>
                 <span class="bg-soft-success text-primary">$ {{$data->cash_balance}}</span>
             </div>
-           <!--  <div class="card-body col-lg-4 col-md-4 col-sm-6" style="margin: auto;">
+            <div class="card-body col-lg-4 col-md-4 col-sm-6" style="margin: auto;">
                 <div class="">
                     <label class="label_title_2">Enter User Id</label>
                     <input id="otheruserid" class="form-group-control input-radius" type="text" placeholder="Enter User Id" value="" name="userid" onchange="handleotheruserid()">
@@ -22,7 +22,7 @@
                 <div class="text-center">
                     <button id="button" type="button" class="btn w-md" style="width: 100%; margin: 20px 0px" onclick="maketransfer()" disabled>Submit</button>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
 </div>
