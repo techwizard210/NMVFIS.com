@@ -21,7 +21,7 @@
                 <label class="tlabel"><i class="material-icons">search</i></label>
             </div>
           </div>
-        <!--   <div class="card-body">
+          <div class="card-body">
             <div class="table-responsive">
               <table class="table">
                 <thead class="text-primary theader">
@@ -39,7 +39,7 @@
                 </tbody>
               </table>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
     </div>
