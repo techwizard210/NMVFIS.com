@@ -41,7 +41,7 @@
                           <!-- <th class="text-right" rowspan="1" colspan="1">Actions</th> -->
                         </tr>
                       </tfoot>
-                      <!-- <tbody>
+                      <tbody>
                         @if($datas)
                         @foreach($datas as $key => $data)
                         @if($key%2 == 0)
@@ -58,7 +58,7 @@
                         @endforeach
                         @else
                         @endif
-                      </tbody> -->
+                      </tbody>
                     </table>
                   </div>
                 </div>
