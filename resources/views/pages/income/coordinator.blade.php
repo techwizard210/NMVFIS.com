@@ -24,7 +24,7 @@
           <div class="card-body">
             <div class="table-responsive">
               <table class="table">
-          <!--       <thead class="text-primary theader">
+                <thead class="text-primary theader">
                     <th>Sr.No</th>
                     <th>User Id</th>
                     <th>Name</th>
@@ -33,7 +33,7 @@
                     <th>Percentage</th>
                     <th>Remark</th>
                     <th>Date</th>
-                </thead> -->
+                </thead>
                 <tbody>
                   
                 </tbody>
